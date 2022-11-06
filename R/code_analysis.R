@@ -240,6 +240,7 @@ gather_fns_help <- function(fns_help, deparsed) {
 #' }
 #' @export
 get_output_intermediates <- function(pipeline) {
+  my_log <- file("my_log.txt")
   clear_verb_summary()
   clear_callouts()
   clear_fns_help()
@@ -254,7 +255,8 @@ get_output_intermediates <- function(pipeline) {
   # potentially a dataframe
   if (inherits(pipeline, "name") && is.data.frame(eval(pipeline))) {
     output <- eval(pipeline)
-    console.log("The output is: ", output);
+    print("test print")
+    print(output)
     return(list(
       list(
         line = 1,

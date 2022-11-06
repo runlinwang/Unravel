@@ -167,8 +167,8 @@ function setup_prompts(summaries) {
           last_callout_nodes = line.callout_nodes;
         }
       });
-      // line_tippy.setContent(summary_obj.summary);
-      line_tippy.setContent("howdy");
+      line_tippy.setContent(summary_obj.summary);
+      // line_tippy.setContent("howdy");
       line.prompt = line_tippy;
     }
   }
