@@ -254,6 +254,7 @@ get_output_intermediates <- function(pipeline) {
   # potentially a dataframe
   if (inherits(pipeline, "name") && is.data.frame(eval(pipeline))) {
     output <- eval(pipeline)
+    console.log("The output is: ", output);
     return(list(
       list(
         line = 1,
